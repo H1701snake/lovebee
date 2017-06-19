@@ -1,0 +1,86 @@
+<div class="cart">
+	<!--购物车-->
+	<div class="empty-notice" ng-show="!status">
+		<div class="pic"></div>
+		<div class="text">亲，购物车空空的耶~</div>
+		<a href="#/market">去逛逛</a>
+	</div>
+	<div class="notice" ng-show="status">
+		<div class="coord">
+			<h2>鲜锋侠需要您的精确坐标</h2>
+		</div>
+		<!--empty-->
+		<div class="empty"></div>
+		<!--购物车内容-->
+		<div class="cart-con-title">
+			<div class="cart-con-title-1">
+				<span></span>
+				<p>闪送超市</p>
+			</div>
+			<p class="cart-con-p">0元起送，22:00前满￥30减免运费，22:00后满￥69减免运费</p>
+		</div>
+		<!--收获时间-->
+		<div class="time">
+			<div class="time-con">
+				<div class="rece-time">
+					<h2>收获时间</h2>
+					<h3>一小时送达</h3>
+				</div>
+				<div class="reserve">
+					<h2>可预订</h2>
+					<i class="icon iconfont">&#xe620;</i>
+				</div>
+			</div>
+		</div>
+		<!--收货备注-->
+		<div class="remark">
+			<div class="rem-con">
+				<h2>收货备注</h2>
+				<input type="text" placeholder="可输入100字以内特殊要求内容" />
+			</div>
+		</div>
+		<!--选中商品-->
+		<div class="choose-pro">
+			<ul>
+				<li ng-repeat='(key,item) in list'>
+					<div class="cho-prds" ng-click="selectFns()">
+						<label>
+							<input type="checkbox" ng-model="item.selec" />
+							<div>
+								
+							</div>			
+						</label>
+						<img ng-src="{{item.img}}" />
+						<div class="prds-info">
+							<h2>{{item.name}}</h2>
+							<p>￥{{item.price}}</p>
+						</div>
+						<div class="prds-num">
+							<i class="icon iconfont" ng-show="item.num>0" ng-click='compute(item,-1,key)'>&#xe602;</i>
+							<p ng-show="item.num>0">{{item.num}}</p>
+							<i class="icon iconfont" ng-click='compute(item,1)'>&#xe661;</i>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<div class="choose-over">
+				<div class="left-all" ng-click="selectAll()">
+					<label>
+						<input type="checkbox" ng-model="selectBtn" />
+						<div>
+							
+						</div>			
+					</label>
+					<h2 class="all-pr">全选</h2>
+					<div class="price-all">
+						<h2>共：</h2>
+						<p>￥{{priceAll}}</p>
+					</div>
+				</div>
+				<div class="over">
+					<h3>选好了</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

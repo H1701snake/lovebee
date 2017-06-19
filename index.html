@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title>爱鲜蜂App-页面重构</title>
+		
+		<link rel="stylesheet" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_ocusssvciue7mn29.css"/>
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		
+		<script src="js/flexible.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.js"></script>
+		<script src="app.js"></script>
+		<script src="js/service.js"></script>
+		<script src="home/home.js"></script>
+		<script src="market/market.js"></script>
+		<script src="cart/cart.js"></script>
+		<style>
+			.swiper-container {
+		        width: 100%;
+		        height: 100%;
+		    }
+		    .swiper-slide {
+		        text-align: center;
+		        font-size: 18px;
+		        background: #fff;
+		        
+		        /* Center slide text vertically */
+		        display: -webkit-box;
+		        display: -ms-flexbox;
+		        display: -webkit-flex;
+		        display: flex;
+		        -webkit-box-pack: center;
+		        -ms-flex-pack: center;
+		        -webkit-justify-content: center;
+		        justify-content: center;
+		        -webkit-box-align: center;
+		        -ms-flex-align: center;
+		        -webkit-align-items: center;
+		        align-items: center;
+		    }
+		</style>
+	</head>
+	<body>
+		<!--
+        	作者：flwflw2007@163.com
+        	时间：2017-06-15
+        	描述：爱鲜蜂App-页面重构
+        -->
+        <!--整体容器-->
+        <div id="wrap">
+        <!--header-->
+	        <header>
+	        	<div id="head">
+	        		<div class="sao">
+	        			<i class="icon iconfont">&#xe631;</i>
+	        			<p>扫一扫</p>
+	        		</div>
+	        		<div class="address">
+	        			<h1>软件园路附近</h1>
+	        			<i class="icon iconfont">&#xe617;</i>
+	        		</div>
+	        		<div class="search">
+	        			<i class="icon iconfont">&#xe603;</i>
+	        			<p>搜索</p>
+	        		</div>
+	        	</div>
+	        </header>
+        <!--内容区-->
+        <div id="content" ng-view>
+        	
+        	
+        </div>
+        	
+        	
+        <!--footer-->
+        <footer>
+        	<div id="foot">
+        		<a href="#/home">
+        			<div class="footbtn">
+        				<i class="icon iconfont">&#xe636;</i>
+        				<p>首页</p>
+        			</div>
+        		</a>
+        		<a href="#/market">
+        			<div class="footbtn">
+        				<i class="icon iconfont">&#xe61c;</i>
+        				<p>闪送超市</p>
+        			</div>
+        		</a>
+        		<a href="#/reserve">
+        			<div class="footbtn">
+        				<i class="icon iconfont">&#xe641;</i>
+        				<p>新鲜预定</p>
+        			</div>
+        		</a>
+        		<a href="#/cart">
+        			<div class="footbtn">
+        				<i class="icon iconfont">&#xe609;</i>
+        				<p>购物车</p>
+        			</div>
+        		</a>
+        		<a href="/">
+        			<div class="footbtn">
+        				<i class="icon iconfont">&#xe611;</i>
+        				<p>我的</p>
+        			</div>
+        		</a>
+        	</div>
+        </footer>
+        </div>
+	</body>
+</html>

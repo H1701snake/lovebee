@@ -1,0 +1,48 @@
+ <!--内容区-->
+ <!--<link href="../css/global.css" />
+ <link href="../css/css.css" />-->
+	       <div class="marckt">
+				<div class="left">
+					<ul>
+						<li ng-click="getData(l,$index)" ng-repeat="l in list track by $index" ng-class="$index==num?'on':''">
+							{{l}}
+						</li>
+					</ul>
+				</div>
+				
+				<div class="right">
+					<div class="top">
+						<div class="type">
+							全部分类
+						</div>
+						<div class="orderBy">
+							综合排序
+						</div>
+					</div>
+					
+					<ul class="list">
+						<li ng-repeat="item in goods[text]">
+							<div class="pic">
+								<img ng-src="{{item.img}}" />
+							</div>
+							<div class="text">
+								<div class="title">{{item.name}}</div>
+								<div class="mack">
+									<span class="j">精选</span>
+									<span class="s" ng-if="item.pm_desc">{{item.pm_desc}}</span>
+								</div>
+								<div class="size">{{item.specifics}}/盒</div>
+								<div class="price">
+									<span class="a">￥{{item.price}}</span>
+									<span class="b">￥{{item.market_price}}</span>
+									<div class="pro-num">
+										<i class="icon iconfont" ng-show="item.num>0" ng-click='compute(item,-1)'>&#xe602;</i>
+										<span ng-show="item.num>0">{{item.num}}</span>
+										<i class="icon iconfont" ng-click='compute(item,1)'>&#xe661;</i>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>

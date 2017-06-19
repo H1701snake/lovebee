@@ -1,0 +1,170 @@
+
+			<!--轮播图-->
+        	<div class="slide">
+			    <div class="swiper-container">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide" ng-repeat="i in data.slide"><img ng-src="{{i.activity.img}}" /></div>
+			    	</div>
+			    	 <!-- Add Pagination -->
+			        <div class="swiper-pagination"></div>
+			        <!-- Add Arrows -->
+			        <div class="swiper-button-next"></div>
+			        <div class="swiper-button-prev"></div>
+  				</div>
+        		
+        	</div>
+        	<!--empty-->
+        	<div class="empty"></div>
+        	<!--网站导航-->
+        	<div class="nav-list">
+        		<div class="nav" ng-repeat="m in data.menu">
+        			<img ng-src="{{m.activity.img}}" />
+        			<h2>{{m.activity.name}}</h2>
+        		</div>
+        	</div>
+        	<!--empty-->
+        	<div class="empty"></div>
+        	<!--鲜锋头条-->
+        	<div class="head-new">
+        		<h3>鲜锋头条</h3>
+        		<span></span>
+        		<div class="news">
+        			<img src="img/mai.jpg" />
+        			<p>3M防霾口罩22.8元/3只&nbsp;&nbsp;1小时闪送</p>
+        		</div>
+        	</div>
+        	<!--empty-->
+        	<div class="empty"></div>
+        	<!--商品头条-->
+        	<div class="pro-head">
+        		<img src="img/pro1.jpg" />
+        		<img src="img/pro2.jpg" />
+        		<img src="img/pro3.jpg" />
+        	</div>
+        	<!--empty-->
+        	<div class="empty"></div>
+        	<!--促销产品-->
+        	<div class="cx-pro">
+        		<img src="img/2016112918160610.jpg@90Q.jpg" />
+        		<img src="img/2016112918160610.jpg@90Q.jpg" />
+        		<img src="img/2016112918160610.jpg@90Q.jpg" />
+        		<img src="img/2016112918160610.jpg@90Q.jpg" />
+        	</div>
+        	<!--empty-->
+        	<div class="empty"></div>
+        	<!--优选水果-->
+        	<div class="nice-fruit">
+        		<!--标题-->
+        		<div class="fru-title">
+        			<div class="title">
+        				<span></span>
+        				<h1>优选水果</h1>
+        			</div>
+        			<div class="more">
+        				<a href="#/market">更多</a>
+        				<i class="icon iconfont">&#xe620;</i>
+        			</div>
+        		</div>
+        		<img class="fru-img" src="img/201611221806316.jpg@90Q.jpg" />
+        		<!--精选-->
+        		<div class="active-pro">
+        			<div class="active-box">
+        				<div class="active" ng-repeat="n in shop" ng-if="$index<3">
+        					<img ng-src="{{n.img}}" />
+        					<div class="act-prize">
+        						<h3>{{n.name}}</h3>
+        						<div class="choose">
+        							<div class="nice">精选</div>
+        							<div class="one">{{n.pm_desc}}</div>
+        						</div>
+        						<div class="prize">
+        							<p class="nor">400-500g/盒<br /><span style="color:#ff3800">￥{{n.price}}</span><span style="text-decoration: line-through;">￥{{n.market_price}}</span></p>
+									<i class="icon iconfont">&#xe661;</i>
+        						</div>
+        						
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        	<!--empty-->
+        	<div class="empty"></div>
+        	<!--empty-->
+        	<div class="empty"></div>
+        	<!--优选水果-->
+        	<div class="nice-fruit">
+        		<!--标题-->
+        		<div class="fru-title">
+        			<div class="title1">
+        				<span></span>
+        				<h1>牛奶面包</h1>
+        			</div>
+        			<div class="more">
+        				<a href="#/market">更多</a>
+        				<i class="icon iconfont">&#xe620;</i>
+        			</div>
+        		</div>
+        		<img class="fru-img" src="img/201611221806316.jpg@90Q.jpg" />
+        		<!--精选-->
+        		<div class="active-pro">
+        			<div class="active-box">
+        				<div class="active" ng-repeat="n in shop" ng-if="$index>3 && $index<7">
+        					<img ng-src="{{n.img}}" />
+        					<div class="act-prize">
+        						<h3>{{n.name}}</h3>
+        						<div class="choose">
+        							<div class="nice">精选</div>
+        							<div class="one">{{n.pm_desc}}</div>
+        						</div>
+        						<div class="prize">
+        							<p class="nor">400-500g/盒<br /><span style="color:#ff3800">￥{{n.price}}</span><span style="text-decoration: line-through;">￥{{n.market_price}}</span></p>
+									<i class="icon iconfont">&#xe661;</i>
+        						</div>
+        						
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        	<!--empty-->
+        	<div class="empty"></div>
+        	<!--empty-->
+        	<div class="empty"></div>
+        	<!--优选水果-->
+        	<div class="nice-fruit">
+        		<!--标题-->
+        		<div class="fru-title">
+        			<div class="title2">
+        				<span></span>
+        				<h1>山东煎饼</h1>
+        			</div>
+        			<div class="more">
+        				<a href="#/market">更多</a>
+        				<i class="icon iconfont">&#xe620;</i>
+        			</div>
+        		</div>
+        		<img class="fru-img" src="img/201611221806316.jpg@90Q.jpg" />
+        		<!--精选-->
+        		<div class="active-pro">
+        			<div class="active-box">
+        				<div class="active" ng-repeat="n in shop" ng-if="$index>6 && $index<10">
+        					<img ng-src="{{n.img}}" />
+        					<div class="act-prize">
+        						<h3>{{n.name}}</h3>
+        						<div class="choose">
+        							<div class="nice">精选</div>
+        							<div class="one" ng-if="n.pm_desc">{{n.pm_desc}}</div>
+        						</div>
+        						<div class="prize">
+        							<p class="nor">400-500g/盒<br /><span style="color:#ff3800">￥{{n.price}}</span><span style="text-decoration: line-through;">￥{{n.market_price}}</span></p>
+									<i class="icon iconfont">&#xe661;</i>
+        						</div>
+        						
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        	<!--empty-->
+        	<div class="empty"></div>
+        	
